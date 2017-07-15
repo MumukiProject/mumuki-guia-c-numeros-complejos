@@ -14,7 +14,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
   
   bool tipoComplejoDefinido() {
-    return sizeof(NOEXISTE) > 0;
+    return sizeof(Complejo) > 0;
   }
   
   void testComplejoExiste() {
