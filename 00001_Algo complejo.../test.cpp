@@ -16,6 +16,7 @@ class MumukiTest : public CppUnit::TestFixture  {
     Complejo complejo;
     CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", aceptaNumeroReal(complejo.real));
     CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", aceptaNumeroReal(complejo.imaginario));
+    CPPUNIT_ASSERT_MESSAGE("La parte real y la parte imaginaria son de distinto tipo.", typeid(complejo.imaginario) == typeid(complejo.real));
   }
   
 };
