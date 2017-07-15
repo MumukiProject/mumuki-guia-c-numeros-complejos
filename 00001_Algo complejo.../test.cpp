@@ -14,6 +14,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
   
   bool tipoComplejoDefinido() {
+    static_assert(type_exists<Complejo>::value, "expected compile-time error");
     return sizeof(Complejo) > 0;
   }
   
