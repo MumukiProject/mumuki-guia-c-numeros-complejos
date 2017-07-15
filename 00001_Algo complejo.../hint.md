@@ -1,0 +1,1 @@
+Recordá que las estructuras con la palaba `struct`.
