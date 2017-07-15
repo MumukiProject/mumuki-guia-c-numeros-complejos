@@ -14,13 +14,13 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
 
   void testComplejoTieneComponenteReal() {
-    Complejo *complejo;
-    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", aceptaNumeroReal(complejo->real));
+    Complejo complejo;
+    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", aceptaNumeroReal(complejo.real));
   }
   
   void testComplejoTieneComponenteImaginaria() {
-    Complejo *complejo;
-    CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", aceptaNumeroReal(complejo->imaginario));
+    Complejo complejo;
+    CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", aceptaNumeroReal(complejo.imaginario));
   }
   
 };
