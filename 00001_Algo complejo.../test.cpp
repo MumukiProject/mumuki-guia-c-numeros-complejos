@@ -12,6 +12,14 @@ class MumukiTest : public CppUnit::TestFixture  {
   bool aceptaNumeroReal(T numero) {
     return typeid(numero) == typeid(float) || typeid(numero) == typeid(double);
   }
+  
+  bool tipoComplejoDefinido() {
+    return typeid(Complejo) != typeid(Test::Complejo);
+  }
+  
+  void testComplejoExiste() {
+    CPPUNIT_ASSERT_MESSAGE("No se definió el tipo Complejo.", tipoComplejoDefinido());
+  }
 
   void testComplejoTieneComponenteReal() {
     Complejo complejo;
