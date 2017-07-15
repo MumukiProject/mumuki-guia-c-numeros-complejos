@@ -1,3 +1,3 @@
-#include <strings
+#include <string>
 
 #using namespace std;
