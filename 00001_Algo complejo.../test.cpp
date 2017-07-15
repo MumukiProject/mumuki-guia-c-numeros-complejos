@@ -5,11 +5,16 @@ class MumukiTest : public CppUnit::TestFixture  {
     CPPUNIT_TEST( testComplejoTieneComponenteReal );
     CPPUNIT_TEST( testComplejoTieneComponenteImaginaria );
   CPPUNIT_TEST_SUITE_END();
+  
+  template <typename T>
+  bool probarNumeroReal(T numero) {
+    std::type_info ti = typeid(numero);
+    return ti == typeid(float) || ti == typeid(double);
+  }
 
   void testComplejoTieneComponenteReal() {
     Complejo complejo;
-    std::type_info ti = typeid(complejo.real);
-    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", probarNumeroRealti == typeid(float) || ti == typeid(double));
+    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", probarNumeroReal(complejo.real));
   }
   
   void testComplejoTieneComponenteImaginaria() {
