@@ -8,8 +8,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   
   template <typename T>
   bool probarNumeroReal(T numero) {
-    std::type_info ti = typeid(numero);
-    return ti == typeid(float) || ti == typeid(double);
+    return typeid(numero) == typeid(float) || typeid(numero) == typeid(double);
   }
 
   void testComplejoTieneComponenteReal() {
