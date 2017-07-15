@@ -1,1 +1,1 @@
-Enunciado
+Desarrollar una función de nombre Modulo que reciba un número complejo y retorne el módulo escalar (real) del mismo.El módulo de un número complejo se calcula como la raiz de la suma de los cuadrados de la parte real y la parte imaginaria.Para calcular la raiz cuadrada de un número se debe invocar la función double sqrt(double numero).
