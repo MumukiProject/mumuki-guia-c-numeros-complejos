@@ -1,6 +1,9 @@
 #include <typeinfo>    // for 'typeid'
 #include <type_traits>
 
+template<class T, class U = void>
+struct type_exists { enum { value = 0 }; };
+
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testComplejoTieneComponenteReal );
