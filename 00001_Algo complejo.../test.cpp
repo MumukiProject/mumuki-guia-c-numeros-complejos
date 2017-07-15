@@ -18,8 +18,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   
   void testComplejoTieneComponenteImaginaria() {
     Complejo complejo;
-    complejo.imaginario = 1.5;
-    CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", complejo.imaginario == 1.5);
+    CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", probarNumeroReal(complejo.imaginario));
   }
   
 };
