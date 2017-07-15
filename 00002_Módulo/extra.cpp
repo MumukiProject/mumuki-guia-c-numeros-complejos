@@ -1,4 +1,4 @@
 struct Complejo {
-  float real;
-  float imaginario;
+  double real;
+  double imaginario;
 };
