@@ -22,7 +22,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   void testComplejoExiste() {
     CPPUNIT_ASSERT_MESSAGE("No se definió el tipo Complejo.", tipoComplejoDefinido());
   }
-
+/*
   void testComplejoTieneComponenteReal() {
     Complejo complejo;
     CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", aceptaNumeroReal(complejo.real));
@@ -32,5 +32,5 @@ class MumukiTest : public CppUnit::TestFixture  {
     Complejo complejo;
     CPPUNIT_ASSERT_MESSAGE("La parte imaginaria no acepta un número real.", aceptaNumeroReal(complejo.imaginario));
   }
-  
+  */
 };
