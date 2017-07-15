@@ -1,5 +1,4 @@
 #include <typeinfo>    // for 'typeid'
-#include <type_traits>
 
 struct Complejo;
 
@@ -11,7 +10,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   
   template <typename T>
   bool aceptaNumeroReal(T &numero) {
-    return std::is_floating_point<numero)>::value;
+    return typeid(numero) == typeid(float) || typeid(numero) == typeid(double) || typeid(numero) == typeid(long double);
   }
 
   void testComplejoTieneComponenteReal() {
