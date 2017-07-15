@@ -10,7 +10,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   
   template <typename T>
   bool aceptaNumeroReal(T numero) {
-    return tstd::is_floating_point<numero)>::value;
+    return std::is_floating_point<numero)>::value;
   }
   
   bool tipoComplejoDefinido() {
