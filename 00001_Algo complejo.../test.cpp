@@ -1,3 +1,5 @@
+#include <typeinfo>    // for 'typeid'
+
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testComplejoTieneComponenteReal );
@@ -6,8 +8,8 @@ class MumukiTest : public CppUnit::TestFixture  {
 
   void testComplejoTieneComponenteReal() {
     Complejo complejo;
-    complejo.real = 1.5;
-    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", complejo.real == 1.5);
+    std::type_info ti = typeid(complejo.real);
+    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", probarNumeroRealti == typeid(float) || ti == typeid(double));
   }
   
   void testComplejoTieneComponenteImaginaria() {
