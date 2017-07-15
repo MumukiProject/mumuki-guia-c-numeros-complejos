@@ -1,8 +1,6 @@
 #include <typeinfo>    // for 'typeid'
-#include <type_traits>
 
-template<class T, class U = void>
-struct type_exists { enum { value = 0 }; };
+struct Complejo;
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
@@ -12,7 +10,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   
   template <typename T>
   bool aceptaNumeroReal(T numero) {
-    return typeid(numero) == typeid(float) || typeid(numero) == typeid(double);
+    return tstd::is_floating_point<numero)>::value;
   }
   
   bool tipoComplejoDefinido() {
