@@ -1,4 +1,5 @@
 #include <typeinfo>    // for 'typeid'
+#include <type_traits>
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
