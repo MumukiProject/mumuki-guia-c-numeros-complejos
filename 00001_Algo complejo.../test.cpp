@@ -1,6 +1,6 @@
 #include <typeinfo>    // for 'typeid'
 
-using namespace Test;
+//using namespace Test;
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
