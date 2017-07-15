@@ -1,1 +1,1 @@
-Recordá que las estructuras con la palaba `struct`.
+Recordá que las estructuras se definien con la palabra `struct`.
