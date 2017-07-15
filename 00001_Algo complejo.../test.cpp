@@ -1,6 +1,6 @@
 #include <typeinfo>    // for 'typeid'
 
-//using namespace Test;
+using namespace Test;
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
@@ -18,7 +18,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
   
   void testComplejoExiste() {
-    CPPUNIT_ASSERT_MESSAGE("No se definió el tipo Complejo.", isType(Complejo));
+    CPPUNIT_ASSERT_MESSAGE("No se definió el tipo Complejo.", tipoComplejoDefinido());
   }
 
   void testComplejoTieneComponenteReal() {
