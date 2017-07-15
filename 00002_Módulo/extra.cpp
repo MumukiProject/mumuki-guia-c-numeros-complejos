@@ -1,5 +1,4 @@
-class Complejo {
-  public:
-    float real;
-    float imaginario;
+struct Complejo {
+  float real;
+  float imaginario;
 };
