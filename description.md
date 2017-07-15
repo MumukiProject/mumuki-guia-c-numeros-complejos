@@ -1,0 +1,1 @@
+Los **números complejos** están compuestos por una parte **real** y otra **imaginaria**. Por ejemplo, el número 3 + 4i tiene parte real 3 y parte imaginaria 4.
