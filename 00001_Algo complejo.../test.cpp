@@ -1,5 +1,7 @@
 #include <typeinfo>    // for 'typeid'
 
+typedef Test:Complejo Complejo;
+
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testComplejoTieneComponenteReal );
