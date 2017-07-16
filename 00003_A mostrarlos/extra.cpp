@@ -1,4 +1,5 @@
 #import <string>
+#include <sstream>
 
 using std::string;
 
@@ -60,7 +61,8 @@ class Salida {
     }
     current = n = 0;
     correcto = true;
-    esperada = salida = ostringstream();
+    esperada.clear();
+    salida.clear();
   }
   bool terminoBien() {
     return correcto;
@@ -92,4 +94,4 @@ template<> Salida& Salida::operator<<(Complejo valor) {
   CPPUNIT_FAIL("No se puede mostrar directamente un registro.");
 }
 
-Salida cout = Salida();
+Salida cout;
