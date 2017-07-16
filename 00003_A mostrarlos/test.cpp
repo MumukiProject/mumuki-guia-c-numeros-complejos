@@ -11,7 +11,7 @@ Salida& operator<<(Salida s, string valor) {
   return s;
 }
 
-Salida cout = TestSalida();
+Salida cout = Salida();
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
