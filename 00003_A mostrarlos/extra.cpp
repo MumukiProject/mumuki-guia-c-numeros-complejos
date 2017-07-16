@@ -10,8 +10,8 @@ struct Complejo {
 class Salida {
   public:
   virtual void limpiar();
-  virtual const Salida& operator<<(double);
-  virtual const Salida& operator<<(string);
+  virtual Salida& operator<<(double);
+  virtual Salida& operator<<(string);
 };
 
 extern Salida cout;

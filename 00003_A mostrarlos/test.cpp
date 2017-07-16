@@ -1,19 +1,19 @@
 #include <typeinfo>    // for 'typeid'
 
-class TestSalida : Salida {
-  void limpiar() {
+class TestSalida : public Salida {
+  virtual void limpiar() {
     
   }
   
-  Salida& operator<<(double valor) const {
-    return this;
+  Salida& operator<<(double valor) {
+    return *this;
   }
-  Salida& operator<<(string valor) const {
-    return this;
+  Salida& operator<<(string valor) {
+    return *this;
   }
-}
+};
 
-Salida cout = new TestSalida();
+Salida cout = TestSalida();
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
