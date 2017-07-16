@@ -49,8 +49,8 @@ class Salida {
   int n = 0;
   int current = 0;
   bool correcto = true;
-  ostringstream esperada;
-  ostringstream salida;
+  std::ostringstream esperada;
+  std::ostringstream salida;
   
   public:
   void limpiar() {

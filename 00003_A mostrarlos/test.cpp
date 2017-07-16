@@ -9,7 +9,9 @@ class MumukiTest : public CppUnit::TestFixture  {
     cout.limpiar();
     cout.esperar(complejo.real).esperar("+").esperar(complejo.imaginario).esperar("i");
     MostrarComplejo(complejo);
-    cout.limpiar();
+    if (!cout.terminoBien()) {
+      CPPUNIT_FAIL(cout.mensajeError());
+    }
   }
 
   void testMostrarComplejo() {
