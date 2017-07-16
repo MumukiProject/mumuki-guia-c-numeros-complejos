@@ -8,9 +8,10 @@ struct Complejo {
 };
 
 virtual class Salida {
+  public:
   virtual void limpiar();
-  virtual Salida &operator<<(double);
-  virtual Salida &operator<<(string);
-}
+  virtual Salida& operator<<(double);
+  virtual Salida& operator<<(string);
+};
 
 extern Salida cout;
