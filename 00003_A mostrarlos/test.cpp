@@ -13,7 +13,7 @@ class TestSalida : Salida {
   }
 }
 
-cout = new TestSalida();
+Salida cout = new TestSalida();
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
