@@ -1,18 +1,5 @@
 #include <typeinfo>    // for 'typeid'
 
-void Salida::limpiar() {
-  
-}
-
-Salida& operator<<(Salida s, double valor) {
-  return s;
-}
-Salida& operator<<(Salida s, string valor) {
-  return s;
-}
-
-Salida cout = Salida();
-
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testMostrarComplejo );
@@ -20,7 +7,9 @@ class MumukiTest : public CppUnit::TestFixture  {
 
   void probarMostrarComplejo(Complejo complejo) {
     cout.limpiar();
+    cout.esperar(complejo.real).esperar("+").esperar(complejo.imaginario).esperar("i");
     MostrarComplejo(complejo);
+    cout.limpiar();
   }
 
   void testMostrarComplejo() {
