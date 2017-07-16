@@ -1,0 +1,1 @@
+Desarrollá el procedimiento `void MostrarMayores(Complejo arreglo[], int n, double mayoresQue)` que recibe un arreglo de números complejos (y la cantidad n de elementos en el arreglo) y muestra todos los elementos del arreglo que son mayores al valor del parámetro mayoresQue. Utilizá la función `Modulo` y el procedimiento `MostrarComplejo` que ya desarrollaste antes.

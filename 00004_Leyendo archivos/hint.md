@@ -1,0 +1,1 @@
+Si no te acordás cómo se usa `fread` podés usar el procedimiento `Leer(archivo, registro)` que lo usa por vos.

@@ -1,0 +1,1 @@
+Desarrollá el procedimiento `void CargarArchivo(FILE *archivo, Complejo arreglo[], int &n)` que recibe un archivo abierto para lectura con números complejos y copia todos los elementos del archivo dentro del arreglo. La cantidad de elementos leídos  se guarda en el parámetro `n`. Asumir que el arreglo tiene tamaño suficiente para todos los elementos del archivo.
