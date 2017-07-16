@@ -6,13 +6,13 @@ bool operator==(Complejo a, Complejo b) {
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
-    CPPUNIT_TEST( testCargarArchivo );
+    CPPUNIT_TEST( testPromedio );
   CPPUNIT_TEST_SUITE_END();
 
   Complejo c(double r, double i) {
     return {r, i};
   }
-  FILE *probarPromedio(int n, ...) {
+  void probarPromedio(int n, ...) {
     Complejo arreglo[n];
     double promedio = 0;
     va_list va;
@@ -28,7 +28,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
   
 
-  void testCargarArchivo() {
+  void testPromedio() {
     probarPromedio(3, c(1, 1), c(3, 4), c(-1, 0));
     probarPromedio(1, c(0.5, -0.5));
   }
