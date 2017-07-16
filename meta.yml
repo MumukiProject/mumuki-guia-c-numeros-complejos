@@ -1,7 +1,7 @@
 ---
 name: Numeros Complejos
 locale: es
-type: learning
+type: practice
 beta: false
 teacher_info: ''
 language: cpp
