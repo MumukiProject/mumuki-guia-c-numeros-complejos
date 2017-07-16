@@ -1,0 +1,1 @@
+Llegó el momento de mostrarle al usuario los números complejos.Desarrollá el procedimiento `MostrarComplejo` que recibe un número complejo por parámetro y lo muestra por pantalla como en el siguiente ejemplo (3 es la parte real y 4 la imaginaria): `3 + 4i`Usá `cout` para la salida por pantalla.
