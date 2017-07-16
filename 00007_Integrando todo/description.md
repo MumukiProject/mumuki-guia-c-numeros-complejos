@@ -1,0 +1,1 @@
+Desarrollá el programa principal (lo vamos a llamar `principal`) que, utilizando los subprogramas desarrollados en los puntos anteriores, cargue el archivo “complejos.bin” que contiene números complejos en un arreglo y muestre los mayores al promedio de ellos. Asumí que el archivo no tiene más de 100 elementos.

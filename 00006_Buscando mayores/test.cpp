@@ -38,7 +38,7 @@ class MumukiTest : public CppUnit::TestFixture  {
     }
     va_end(va);
     MostrarMayores(arreglo, n, mayoresQue);
-    CPPUNIT_ASSERT_MESSAGE("La cantidad de elementos mostrados no corresponde con la cantidad en elementos cuyo módulo es mayor al parámetro.", gCurrent == gTotal);
+    CPPUNIT_ASSERT_MESSAGE("No se mostraron todos los elementos.", gCurrent == gTotal);
     CPPUNIT_ASSERT_MESSAGE("Los elementos mostrados no son los correctos.", gCorrecto);
   }
 
