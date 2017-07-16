@@ -7,13 +7,16 @@ struct Complejo {
   double imaginario;
 };
 
+template <typename T>
 class Esperado {
+  T esperado;
+  
   public:
-  virtual bool esCorrecto(double valor) {
-    return false;
+  Esperado(T valor) {
+    this.esperado = valor;
   }
-  virtual bool esCorrecto(string valor) {
-    return false;
+  virtual bool esCorrecto(T valor) {
+    return esperado == valor;
   }
   template <typename T>
   bool esCorrecto(T valor) {
@@ -21,23 +24,7 @@ class Esperado {
   }
 };
 
-class EsperadoDouble : public Esperado {
-  double esperado;
-  public:
-  EsperadoDouble(double esperado) {
-    this->esperado = esperado;
-  }
-  bool esCorrecto(double valor) {
-    return valor == esperado;
-  }
-};
-
-class EsperadoString : public Esperado {
-  string esperado;
-  public:
-  EsperadoString(string esperado) {
-    this->esperado = esperado;
-  }
+class Esperado<string> {
   bool esCorrecto(string valor) {
     return valor.find(esperado) != string::npos;
   }
@@ -61,12 +48,9 @@ class Salida {
     CPPUNIT_ASSERT_MESSAGE("faltaron salidas", current == n);
   }
   
-  Salida& esperar(double valor) {
-    esperados[n++] = new EsperadoDouble(valor);
-    return *this;
-  }
-  Salida& esperar(string valor) {
-    esperados[n++] = new EsperadoString(valor);
+  template <typedef T>
+  Salida& esperar(T valor) {
+    esperados[n++] = new Esperado(valor);
     return *this;
   }
   
