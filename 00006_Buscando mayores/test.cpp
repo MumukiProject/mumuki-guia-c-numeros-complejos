@@ -14,7 +14,7 @@ void MostrarComplejo(Complejo complejo) {
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
-    CPPUNIT_TEST( testCargarArchivo );
+    CPPUNIT_TEST( testMostrarMayores );
   CPPUNIT_TEST_SUITE_END();
 
   Complejo c(double r, double i) {
