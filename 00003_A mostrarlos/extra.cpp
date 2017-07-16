@@ -48,6 +48,9 @@ class Salida {
   Esperado *esperados[10];
   int n = 0;
   int current = 0;
+  bool correcto = true;
+  ostringstream esperada;
+  ostringstream salida;
   
   public:
   void limpiar() {
@@ -56,26 +59,31 @@ class Salida {
       esperados[i] = 0;
     }
     current = n = 0;
+    correcto = true;
+    esperada = salida = ostringstream();
   }
-  void terminoBien() {
-    CPPUNIT_ASSERT_MESSAGE("faltaron salidas", current == n);
+  bool terminoBien() {
+    return correcto;
+  }
+  string mensajeError() {
+    return "Se esperaba \"" + esperada.str() + "\" pero se obtuvo \"" + salida.str() + "\"";
   }
   
   Salida& esperar(double valor) {
+    esperada << valor;
     esperados[n++] = new EsperadoDouble(valor);
     return *this;
   }
   Salida& esperar(string valor) {
+    esperada << valor;
     esperados[n++] = new EsperadoString(valor);
     return *this;
   }
   
   template <typename T>
   Salida& operator<<(T valor) {
-    CPPUNIT_ASSERT_MESSAGE("hubo mas salidas que las esperadas.", current < n);
-    if (current < n) {
-      CPPUNIT_ASSERT_MESSAGE("se esperaba un valor distinto", esperados[current++]->esCorrecto(valor));
-    }
+    salida << valor;
+    correcto = correcto && (current < n) && esperados[current++]->esCorrecto(valor);
     return *this;
   }
 };
