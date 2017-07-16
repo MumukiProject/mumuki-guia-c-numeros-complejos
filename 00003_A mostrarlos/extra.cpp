@@ -7,11 +7,11 @@ struct Complejo {
   double imaginario;
 };
 
-virtual class Salida {
+class Salida {
   public:
   virtual void limpiar();
-  virtual Salida& operator<<(double);
-  virtual Salida& operator<<(string);
+  virtual const Salida& operator<<(double);
+  virtual const Salida& operator<<(string);
 };
 
 extern Salida cout;
