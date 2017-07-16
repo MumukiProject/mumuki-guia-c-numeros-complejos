@@ -15,6 +15,10 @@ class Esperado {
   virtual bool esCorrecto(string valor) {
     return false;
   }
+  template <typename T>
+  bool esCorrecto(T valor) {
+    return false;
+  }
 };
 
 class EsperadoDouble : public Esperado {
