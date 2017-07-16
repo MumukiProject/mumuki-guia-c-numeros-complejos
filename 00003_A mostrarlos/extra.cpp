@@ -80,4 +80,8 @@ class Salida {
   }
 };
 
+template<> Salida& Salida::operator<<(Complejo valor) {
+  CPPUNIT_FAIL("No se puede mostrar directamente un registro.");
+}
+
 Salida cout = Salida();
