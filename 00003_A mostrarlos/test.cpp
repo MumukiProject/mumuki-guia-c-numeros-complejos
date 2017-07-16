@@ -1,17 +1,15 @@
 #include <typeinfo>    // for 'typeid'
 
-class TestSalida : public Salida {
-  virtual void limpiar() {
-    
-  }
+void Salida::limpiar() {
   
-  Salida& operator<<(double valor) {
-    return *this;
-  }
-  Salida& operator<<(string valor) {
-    return *this;
-  }
-};
+}
+
+Salida& operator<<(Salida s, double valor) {
+  return s;
+}
+Salida& operator<<(Salida s, string valor) {
+  return s;
+}
 
 Salida cout = TestSalida();
 
