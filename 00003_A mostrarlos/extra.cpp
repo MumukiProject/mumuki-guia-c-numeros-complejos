@@ -16,10 +16,6 @@ class Esperado {
   virtual bool esCorrecto(string valor) {
     return false;
   }
-  template <typename T>
-  bool esCorrecto(T valor) {
-    return false;
-  }
 };
 
 class EsperadoDouble : public Esperado {
@@ -65,7 +61,7 @@ class Salida {
     salida.clear();
   }
   bool terminoBien() {
-    return correcto;
+    return correcto && current == n;
   }
   string mensajeError() {
     return "Se esperaba \"" + esperada.str() + "\" pero se obtuvo \"" + salida.str() + "\"";
@@ -85,6 +81,7 @@ class Salida {
   template <typename T>
   Salida& operator<<(T valor) {
     salida << valor;
+    std::cout << (current < n) << esperados[current]->esCorrecto(valor)<<std::endl;
     correcto = correcto && (current < n) && esperados[current++]->esCorrecto(valor);
     return *this;
   }
