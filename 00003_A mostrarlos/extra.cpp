@@ -5,7 +5,7 @@ using std::string;
 struct Complejo {
   double real;
   double imaginario;
-}
+};
 
 virtual class Salida {
   virtual void limpiar();
@@ -13,4 +13,4 @@ virtual class Salida {
   virtual Salida &operator<<(string);
 }
 
-Salida cout;
+extern Salida cout;
