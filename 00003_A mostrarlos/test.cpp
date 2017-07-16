@@ -5,10 +5,10 @@ class TestSalida : Salida {
     
   }
   
-  Salida &<<(double valor) {
+  const Salida& operator<<(double valor) {
     return this;
   }
-  Salida &<<(string valor) {
+  const Salida& operator<<(string valor) {
     return this;
   }
 }
