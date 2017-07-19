@@ -5,6 +5,7 @@ struct Complejo;
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
     CPPUNIT_TEST( testComplejoEstaBienDefinido );
+    CPPUNIT_TEST( test1 );
   CPPUNIT_TEST_SUITE_END();
   
   template <typename T>
@@ -19,4 +20,7 @@ class MumukiTest : public CppUnit::TestFixture  {
     CPPUNIT_ASSERT_MESSAGE("La parte real y la parte imaginaria son de distinto tipo.", typeid(complejo.imaginario) == typeid(complejo.real));
   }
   
+  void test1() {
+    CPPUNIT_ASSERT_MESSAGE("La parte real no acepta un número real.", 1 == 2);
+  }
 };
