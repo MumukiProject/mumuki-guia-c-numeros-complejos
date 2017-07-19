@@ -6,10 +6,7 @@ struct Complejo;
   Se define la variable acá para tirar error
   una sola vez.
 */
-Complejo complejo = {
-  real: 0,
-  imaginario: 0
-};
+Complejo complejo;
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
@@ -32,6 +29,7 @@ class MumukiTest : public CppUnit::TestFixture  {
   }
   
   void testRealEImaginarioSonDelMismoTipo() {
+    complejo.imaginario;
     CPPUNIT_ASSERT_MESSAGE("La parte real y la parte imaginaria son de distinto tipo.", typeid(complejo.imaginario) == typeid(complejo.real));
   }
   
