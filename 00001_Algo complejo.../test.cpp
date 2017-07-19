@@ -6,9 +6,10 @@ struct Complejo;
   Se define la variable acá para tirar error
   una sola vez.
 */
-Complejo complejo;
-complejo.real;
-complejo.imaginario;
+Complejo complejo = {
+  real: 0,
+  imaginario: 0
+};
 
 class MumukiTest : public CppUnit::TestFixture  {
   CPPUNIT_TEST_SUITE( MumukiTest );
